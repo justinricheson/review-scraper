@@ -10,7 +10,7 @@ build:
 
 run:
 	@echo "--> running project"
-	go run $(ROOT_DIR)/cmd/.
+	go run $(ROOT_DIR)/cmd/. -company-id=$(COMPANY_ID)
 
 clean:
 	@echo "--> cleaning project"
@@ -34,6 +34,6 @@ test:
 
 tidy:
 	@echo "--> tidying project"
-	go get -u ./...
-	go mod vendor
-	go mod tidy
+	GOFLAGS=-mod=vendor go get -u ./...
+	GOFLAGS=-mod=vendor go mod vendor
+	GOFLAGS=-mod=vendor go mod tidy
