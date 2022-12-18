@@ -2,6 +2,9 @@ module github.com/justinricheson/review-scraper
 
 go 1.19
 
-require github.com/sirupsen/logrus v1.9.0
+require github.com/PuerkitoBio/goquery v1.8.0
 
-require golang.org/x/sys v0.3.0 // indirect
+require (
+	github.com/andybalholm/cascadia v1.3.1 // indirect
+	golang.org/x/net v0.4.0 // indirect
+)
